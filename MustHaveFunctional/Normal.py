@@ -8,5 +8,5 @@ def norm(num):
             k -= 1
             num = num * 10
 
-    return num, k
+    return round(num, 2), k
 

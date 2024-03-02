@@ -12,15 +12,13 @@ def f1(t):
     r = t / c
     r_p = Normal.norm(r)
 
-    print('R = t / c = %g * 10^%d / 3 * 10^-9 = %g * 10^%d' % (t_p[0], t_p[1], round(r_p[0], 2), r_p[1]))
+    print('R = t / c = %g * 10^%d / 3 * 10^-9 = %g * 10^%d' % (t_p[0], t_p[1], r_p[0], r_p[1]))
 
     return r_p
 
 
 #Задание 2
 def f2(arr):
-    print(arr)
-    print(type(arr))
     #Среднее значение t
     sr = sum(arr) / len(arr)
     sr_p = Normal.norm(sr)
@@ -39,7 +37,7 @@ def f2(arr):
     count = 1
     for i in arr:
         Δarr.append(sr - i)
-        print('Δ%d = %g' % (count, round(sr - i, 2)))
+        print('Δ%d = %g' % (count, sr - i))
         count += 1
 
     Δcl = sqrt(sum([i ** 2 for i in Δarr]) / 380)
@@ -54,7 +52,7 @@ def f2(arr):
     ΔC_p = Normal.norm(ΔC)
     print('ΔC = Δt/R0 = (%g * 10^%d) / 10 ^ 4 = %g * 10^%d' % (Δt_p[0], Δt_p[1], ΔC_p[0], ΔC_p[1]))
 
-    print('C = (%g * 10^%d +- %g * 10^%d) Ф' % (round(C_p[0], 2), C_p[1], round(ΔC_p[0], 2), ΔC_p[1]))
+    print('C = (%g * 10^%d +- %g * 10^%d) Ф' % (C_p[0], C_p[1], ΔC_p[0], ΔC_p[1]))
 
 
     return C_p, ΔC_p, Δcl_p, sr_p
