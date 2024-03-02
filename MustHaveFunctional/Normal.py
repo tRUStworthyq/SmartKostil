@@ -7,6 +7,9 @@ def norm(num):
         if num < 1:
             k -= 1
             num = num * 10
-
-    return round(num, 2), k
-
+    s = ''
+    if k == 0:
+        s = str(round(num, 2))
+    else:
+        s = str(round(num, 2)) + ' * 10^' + str(k)
+    return s
