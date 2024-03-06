@@ -55,6 +55,7 @@ def f2(arr):
 
     print('C = (' + C_p + ' +- ' + ΔC_p + ') Ф')
 
+    print('12345')
     return C_p, ΔC_p, Δcl_p, sr_p
 
 
