@@ -12,6 +12,8 @@ def f1(y, U1, U2):
 
     C1 = 1 / (4 * y[0] * R) * ((U2[0] * 10 ** -3) / U1[0])
 
+    print('12345')
+
     C1_p = Normal.norm(C1)
     arr.append(C1_p)
     y_p1 = Normal.norm(y[0])
